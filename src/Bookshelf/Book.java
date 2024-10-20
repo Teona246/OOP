@@ -5,6 +5,15 @@ public class Book {
     private Author author;
     private Integer yearOfPublication;
 
+    public Book() {
+    }
+
+    public Book(String bookName, Author author, Integer yearOfPublication) {
+        this.bookName = bookName;
+        this.author = author;
+        this.yearOfPublication = yearOfPublication;
+    }
+
     public String getBookName() {
         return bookName;
     }

@@ -4,6 +4,13 @@ public class Author {
     private String firstName;
     private String lastName;
 
+    public Author() {
+    }
+
+    public Author(String firstName, String lastName) {
+        this.lastName = lastName;
+        this.firstName = firstName;
+    }
 
     public String getFirstName() {
         return firstName;
