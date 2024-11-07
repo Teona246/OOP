@@ -6,7 +6,10 @@ public class Animal {
         this.name = name;
     }
     public void makeSound() {
-        System.out.println("Sound: ");
+        System.out.println(toString() + " Sound: ");
+    }
+    public void eatSomething() {
+        System.out.println(toString() + " eats something");
     }
 
     public String getName() {
@@ -15,5 +18,10 @@ public class Animal {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return name;
     }
 }
