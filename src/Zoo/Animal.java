@@ -1,16 +1,19 @@
 package Zoo;
-public class Animal {
+
+public abstract class Animal {
     private String name;
 
     public Animal(String name) {
         this.name = name;
     }
-    public void makeSound() {
-        System.out.println(toString() + " Sound: ");
-    }
+
+    public abstract void makeSound();
+
     public void eatSomething() {
         System.out.println(toString() + " eats something");
     }
+
+    public abstract void move();
 
     public String getName() {
         return name;
