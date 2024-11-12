@@ -1,9 +1,10 @@
 package Zoo;
 
-public class Bird extends Animal{
-    protected Bird(String name) {
+public class Bird extends Animal {
+    public Bird(String name) {
         super(name);
     }
+
     private boolean canFly;
 
     public boolean isCanFly() {
@@ -18,5 +19,14 @@ public class Bird extends Animal{
     @Override
     public void eatSomething() {
         System.out.println(super.toString() + " ест семена");
+    }
+
+    @Override
+    public void move() {
+        if (canFly == isCanFly()) {
+            System.out.println("Птица летает");
+        } else {
+            System.out.println("Птица не может летать");
+        }
     }
 }
