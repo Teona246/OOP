@@ -1,6 +1,6 @@
 package Zoo;
 
-public class Cat extends Animal implements Pet {
+public final class Cat extends Animal implements Pet {
     public Cat(String name) {
         super(name);
     }
