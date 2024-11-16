@@ -2,30 +2,34 @@ package Football;
 
 public class Main {
     public static void main(String[] args) {
-        Player player1 = Player.addPlayer();
-        Player player2 = Player.addPlayer();
-        Player player3 = Player.addPlayer();
 
-        Player.info();
-        System.out.println(Player.getCountPlayers());
+        Game game = new Game();
+        System.out.println(game.getPlayers());
 
-        Player player4 = Player.addPlayer();
-        Player player5 = Player.addPlayer();
-        Player player6 = Player.addPlayer();
-        Player player7 = Player.addPlayer();
-        Player player8 = Player.addPlayer();
+        game.addPlayer("Алексей");
+        game.addPlayer("Олег");
+        game.addPlayer("Слава");
 
-        System.out.println(Player.getCountPlayers());
+        Game.info();
+        game.addPlayer("Сергей");
+        game.addPlayer("Андрей");
+        game.addPlayer("Никита");
+        game.addPlayer("Игорь");
+
+        Game.info();
+
+        Player player1 = game.getPlayers().get(0);
+        Player player2 = game.getPlayers().get(1);
+        Player player3 = game.getPlayers().get(2);
+        Player player4 = game.getPlayers().get(3);
+        Player player5 = game.getPlayers().get(4);
+        Player player6 = game.getPlayers().get(5);
+
+        System.out.println(player1);
+        player3.run();
+        player4.run();
 
 
-        for (int i = player2.getStamina(); i >= 0; i--) {
-            player2.run();
-        }
-        Player.info();
-
-        if ( player1 != null) {
-            player1.run();
-        }
     }
 
 
