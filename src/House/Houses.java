@@ -1,5 +1,7 @@
 package House;
 
+import java.util.Objects;
+
 public class Houses {
     private int floors;
     private int rooms;
@@ -49,4 +51,16 @@ public class Houses {
         }
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Houses houses = (Houses) o;
+        return floors == houses.floors && rooms == houses.rooms && isGarage == houses.isGarage;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(floors, rooms, isGarage);
+    }
 }
