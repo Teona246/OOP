@@ -34,9 +34,9 @@ public class Task implements Comparable<Task> {
     @Override
     public int compareTo(Task otherTask) {
         if (this.priority.compareTo(otherTask.priority) == 0) {
-            return Integer.compare(this.priority, otherTask.priority);
-        } else {
             return this.category.compareTo(otherTask.category);
+        } else {
+            return Integer.compare(this.priority, otherTask.priority);
         }
 
     }
