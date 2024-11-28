@@ -37,6 +37,7 @@ public class Task implements Comparable<Task> {
             return this.category.compareTo(otherTask.category);
         } else {
             return Integer.compare(this.priority, otherTask.priority);
+
         }
 
     }

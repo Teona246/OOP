@@ -33,5 +33,6 @@ public class Main {
         System.out.println("Очищаем все");
         task.clear();
         System.out.println(task + "очередь пустая");
+
     }
 }
