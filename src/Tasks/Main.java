@@ -23,7 +23,16 @@ public class Main {
         System.out.println(task.poll());
         System.out.println(task.poll());
         System.out.println(task.poll());
-        System.out.println(task.poll());
-        System.out.println(task.poll());
+//        System.out.println(task.poll());
+//        System.out.println(task.poll());
+
+        task.peek();
+        task.peek();
+        System.out.println("Слудющие в очереди будут: " + task);
+
+        System.out.println("Очищаем все");
+        task.clear();
+        System.out.println(task + "очередь пустая");
+
     }
 }
