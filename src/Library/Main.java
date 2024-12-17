@@ -12,6 +12,7 @@ public class Main {
         Book book4 = new Book(4, "Ведьмак", "Анджей Сапковски", true);
         Book book5 = new Book(5, "Единственный", "Джон Марс", false);
         Book book6 = new Book(6, "Отбор", "Кира Касс", true);
+        Book book7 = new Book(6, "Осень патриарха", "Габриэль Гарсиа Маркес", true);
 
         Library library = new Library();
         library.addBook(book1);
@@ -20,6 +21,8 @@ public class Main {
         library.addBook(book4);
         library.addBook(book5);
         library.addBook(book6);
+        library.addBook(book7);
+
 
         System.out.println(library.getBookId(3));
         System.out.println(library.listOfBooks());
@@ -28,5 +31,10 @@ public class Main {
         System.out.println(library.countBooks());
         System.out.println(Arrays.toString(library.countAvailableBookd()));
         System.out.println(library.authors());
+        System.out.println(library.partitionID(5));
+        System.out.println(library.isAvailablePart());
+        System.out.println(library.groupByAuthor());
+
+
     }
 }
