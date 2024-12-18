@@ -4,6 +4,7 @@ package Library;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class Library {
     Map<Integer, Book> books = new HashMap<Integer, Book>();
@@ -14,6 +15,11 @@ public class Library {
 
     public Book getBookId(Integer id) {
         return books.get(id);
+    }
+
+    public Map<Boolean, List<Book>> partitionID(Integer n) {
+        return books.values().stream()
+                .collect(Collectors.partitioningBy(b -> b.getId() > n));
     }
 
     public List<Book> listOfBooks() {
@@ -28,6 +34,11 @@ public class Library {
                 .toList();
     }
 
+    public Map<Boolean, List<Book>> isAvailablePart() {
+        return books.values().stream()
+                .collect((Collectors.partitioningBy(b -> b.isAvailable())));
+    }
+
     public Integer countBooks() {
         return books.size();
     }
@@ -38,6 +49,13 @@ public class Library {
                 count());
         Integer notAvailable = books.size() - available;
         return new Integer[]{available, notAvailable};
+    }
+
+    public Map<String, List<Book>> groupByAuthor() {
+        return books.values().stream()
+                .collect(Collectors.groupingBy(
+                        b -> b.getAuthor(),
+                        Collectors.toList()));
     }
 
     public List<String> authors() {
